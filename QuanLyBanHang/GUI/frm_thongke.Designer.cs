@@ -37,6 +37,7 @@
             this.btn_tinhtong = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_thongke)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -46,12 +47,12 @@
             this.dgv_thongke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_thongke.Location = new System.Drawing.Point(12, 207);
             this.dgv_thongke.Name = "dgv_thongke";
-            this.dgv_thongke.Size = new System.Drawing.Size(652, 206);
+            this.dgv_thongke.Size = new System.Drawing.Size(602, 206);
             this.dgv_thongke.TabIndex = 96;
             // 
             // dt_timesau
             // 
-            this.dt_timesau.CustomFormat = "dd/MM/yyyy";
+            this.dt_timesau.CustomFormat = "MM/dd/yyyy";
             this.dt_timesau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_timesau.Location = new System.Drawing.Point(179, 26);
             this.dt_timesau.Name = "dt_timesau";
@@ -75,7 +76,7 @@
             // 
             // dt_timetruoc
             // 
-            this.dt_timetruoc.CustomFormat = "dd/MM/yyyy";
+            this.dt_timetruoc.CustomFormat = "MM/dd/yyyy";
             this.dt_timetruoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_timetruoc.Location = new System.Drawing.Point(6, 26);
             this.dt_timetruoc.Name = "dt_timetruoc";
@@ -101,16 +102,16 @@
             // txt_tong
             // 
             this.txt_tong.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tong.Location = new System.Drawing.Point(386, 144);
+            this.txt_tong.Location = new System.Drawing.Point(405, 143);
             this.txt_tong.Name = "txt_tong";
-            this.txt_tong.Size = new System.Drawing.Size(229, 27);
+            this.txt_tong.Size = new System.Drawing.Size(165, 27);
             this.txt_tong.TabIndex = 100;
             // 
             // btn_tinhtong
             // 
             this.btn_tinhtong.BackColor = System.Drawing.Color.Transparent;
             this.btn_tinhtong.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tinhtong.Location = new System.Drawing.Point(434, 84);
+            this.btn_tinhtong.Location = new System.Drawing.Point(425, 84);
             this.btn_tinhtong.Name = "btn_tinhtong";
             this.btn_tinhtong.Size = new System.Drawing.Size(136, 33);
             this.btn_tinhtong.TabIndex = 99;
@@ -144,18 +145,29 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm theo thời gian";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(570, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 19);
+            this.label1.TabIndex = 101;
+            this.label1.Text = "VNĐ";
+            // 
             // frm_thongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 440);
+            this.ClientSize = new System.Drawing.Size(658, 440);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_thongke);
             this.Controls.Add(this.txt_tong);
             this.Controls.Add(this.btn_tinhtong);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox3);
             this.Name = "frm_thongke";
-            this.Text = "frm_thongke";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgv_thongke)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -175,5 +187,6 @@
         private System.Windows.Forms.Button btn_tinhtong;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label1;
     }
 }

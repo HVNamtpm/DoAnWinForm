@@ -46,13 +46,13 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtv_khachhang = new System.Windows.Forms.DataGridView();
-            this.cb_gioitinh = new System.Windows.Forms.ComboBox();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioiTINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaCHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cb_gioitinh = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtv_khachhang)).BeginInit();
             this.SuspendLayout();
@@ -280,18 +280,6 @@
             this.dtv_khachhang.TabIndex = 0;
             this.dtv_khachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtv_khachhang_CellClick);
             // 
-            // cb_gioitinh
-            // 
-            this.cb_gioitinh.FormattingEnabled = true;
-            this.cb_gioitinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Khác"});
-            this.cb_gioitinh.Location = new System.Drawing.Point(200, 138);
-            this.cb_gioitinh.Name = "cb_gioitinh";
-            this.cb_gioitinh.Size = new System.Drawing.Size(121, 28);
-            this.cb_gioitinh.TabIndex = 106;
-            // 
             // MaKH
             // 
             this.MaKH.DataPropertyName = "MaKH";
@@ -332,6 +320,18 @@
             this.SDT.Name = "SDT";
             this.SDT.Width = 120;
             // 
+            // cb_gioitinh
+            // 
+            this.cb_gioitinh.FormattingEnabled = true;
+            this.cb_gioitinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
+            this.cb_gioitinh.Location = new System.Drawing.Point(200, 138);
+            this.cb_gioitinh.Name = "cb_gioitinh";
+            this.cb_gioitinh.Size = new System.Drawing.Size(121, 28);
+            this.cb_gioitinh.TabIndex = 106;
+            // 
             // frm_khachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -359,7 +359,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_khachhang";
-            this.Text = "frm_khachhang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_khachhang_Load);
             this.groupBox1.ResumeLayout(false);

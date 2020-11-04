@@ -34,8 +34,7 @@ namespace QuanLyBanHang.GUI
             string sql = "select count(*) from TAIKHOAN where TK = '" + txt_taikhoan.Text.ToUpper() + "'and MK = '" + txt_matkhau.Text.ToUpper() + "'";
             int kq = (int)lopchung.ExcuteScalar(sql);
             if (kq >= 1)
-            {
-                MessageBox.Show("Đăng nhâp thành công");
+            {               
                 Frm_Main main = new Frm_Main();
                 main.Show();
                 this.Hide();
