@@ -14,9 +14,9 @@ namespace QuanLyBanHang.GUI
     {
         DataTable tblH;
         Lopdungchung lopchung = new Lopdungchung();
-
         BLL.BLL_hanghoa bllhh;
         BLL.BLL_nhacungcap bllncc;
+
         public frm_hanghoa()
         {
             InitializeComponent();
@@ -44,8 +44,7 @@ namespace QuanLyBanHang.GUI
             {
                 bllhh.suahh();
                 bllhh.loadhh();
-            }
-           
+            }          
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -67,13 +66,11 @@ namespace QuanLyBanHang.GUI
             else
                 gn = Convert.ToDouble(txt_dongianhap.Text);
             gb = gn + (gn * 20 / 100);
-            txt_dongiaban.Text = gb.ToString();
+                txt_dongiaban.Text = gb.ToString();
         }
 
-       
-
         private void dtv_hanghoa_CellClick(object sender, DataGridViewCellEventArgs e)
-            {
+        {
                 txt_mahang.Text = dtv_hanghoa.CurrentRow.Cells["MaH"].Value.ToString();
                 cb_ncc.SelectedValue = dtv_hanghoa.CurrentRow.Cells["MaNCC"].Value.ToString();
                 txt_tenhang.Text = dtv_hanghoa.CurrentRow.Cells["TenHANG"].Value.ToString();          
@@ -83,14 +80,13 @@ namespace QuanLyBanHang.GUI
         }
 
         private void btn_Find_Click(object sender, EventArgs e)
-        {
-            string sql;
+        {           
             if ((txt_mahang.Text == "") && (txt_tenhang.Text == "") && (cb_ncc.Text == ""))
             {
-                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn hãy nhập thông tin tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = "SELECT * from HANGHOA WHERE 1=1";
+            String sql = "SELECT * from HANGHOA WHERE 1=1";
             if (txt_mahang.Text != "")
                 sql += " AND MAH LIKE N'%" + txt_mahang.Text + "%'";
             if (txt_tenhang.Text != "")
@@ -102,7 +98,6 @@ namespace QuanLyBanHang.GUI
                 MessageBox.Show("Không có hàng hóa thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show("Có " + tblH.Rows.Count + "  hàng hóa thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dtv_hanghoa.DataSource = tblH;
-
         }
 
         private void btn_load_Click(object sender, EventArgs e)

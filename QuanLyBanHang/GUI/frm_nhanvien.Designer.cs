@@ -127,7 +127,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.Black;
             this.btnThem.Image = global::QuanLyBanHang.Properties.Resources.add1;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(45, 254);
+            this.btnThem.Location = new System.Drawing.Point(61, 254);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(129, 48);
@@ -301,7 +301,7 @@
             // 
             this.btn_load.Location = new System.Drawing.Point(52, 330);
             this.btn_load.Name = "btn_load";
-            this.btn_load.Size = new System.Drawing.Size(184, 28);
+            this.btn_load.Size = new System.Drawing.Size(227, 28);
             this.btn_load.TabIndex = 89;
             this.btn_load.Text = "Hiên thị lại danh sách nhân viên";
             this.btn_load.UseVisualStyleBackColor = true;

@@ -23,14 +23,13 @@ namespace QuanLyBanHang.GUI
         {
             bllkh.loadkh();
         }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             bllkh.Luukh();
             bllkh.loadkh();
         }
-
-       
-
+      
         private void btnSua_Click(object sender, EventArgs e)
         {
             DialogResult dialog;

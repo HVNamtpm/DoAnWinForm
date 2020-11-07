@@ -12,15 +12,11 @@ namespace QuanLyBanHang.GUI
 {
     public partial class frm_nhacungcap : Form
     {
-        BLL.BLL_nhacungcap bllncc;
-        //BLL.BLL_hanghoa bllhh;
-
+        BLL.BLL_nhacungcap bllncc;      
         public frm_nhacungcap()
         {
             InitializeComponent();
             bllncc = new BLL.BLL_nhacungcap(this);
-            //bllhh = new BLL.BLL_hanghoa(this);
-
         }
        
         private void btnThem_Click(object sender, EventArgs e)
@@ -28,6 +24,7 @@ namespace QuanLyBanHang.GUI
             bllncc.Themncc();
             bllncc.Loadncc();
         }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
             DialogResult dialog;
@@ -38,6 +35,7 @@ namespace QuanLyBanHang.GUI
                 bllncc.Loadncc();
             }
         }
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
 
@@ -48,29 +46,22 @@ namespace QuanLyBanHang.GUI
                 bllncc.Xoancc();
                 bllncc.Loadncc();
             }
-
         }
-
 
         private void frm_nhacungcap_Load(object sender, EventArgs e)
         {
             bllncc.Loadncc();
         }
-
-       
-       
-
+            
         private void dtv_nhacungcap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txt_mancc.Text = dtv_nhacungcap.CurrentRow.Cells["MaNCC"].Value.ToString();
-            txt_tenncc.Text = dtv_nhacungcap.CurrentRow.Cells["TenNCC"].Value.ToString();
-            
+            txt_tenncc.Text = dtv_nhacungcap.CurrentRow.Cells["TenNCC"].Value.ToString();           
         }
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            this.Close();
-                
+            this.Close();               
         }
     }
 }

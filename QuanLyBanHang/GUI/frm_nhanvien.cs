@@ -25,15 +25,18 @@ namespace QuanLyBanHang.GUI
         {
             bll_nv.loadnv();
         }
+
         private void btn_load_Click(object sender, EventArgs e)
         {
             bll_nv.loadnv();
         }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             bll_nv.luunv();
             bll_nv.loadnv();
-        }      
+        } 
+        
         private void btnSua_Click(object sender, EventArgs e)
         {
             DialogResult dialog;
@@ -43,8 +46,8 @@ namespace QuanLyBanHang.GUI
                 bll_nv.suanv();
                 bll_nv.loadnv();
             }
-
         }
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult dialog;
@@ -73,23 +76,19 @@ namespace QuanLyBanHang.GUI
 
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
-            string sql;
             if ((txt_tennv.Text == ""))
             {
-                MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn hãy nhập tên nhân viên cần tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = "SELECT * from NHANVIEN WHERE 1=1";
-
+           string sql = "SELECT * from NHANVIEN WHERE 1=1";
             if (txt_tennv.Text != "")
                 sql += " AND TenNV LIKE N'%" + txt_tennv.Text + "%'";
-            DataTable dt = lopchung.LoadDuLieu(sql);
+              DataTable dt = lopchung.LoadDuLieu(sql);
             if (dt.Rows.Count == 0)
-                MessageBox.Show("Không có nhân viên thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không có tên nhân viên cần tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show("Có " + dt.Rows.Count + " nhân viên thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dtv_nhanvien.DataSource = dt;
-        }
-
-       
+        }      
     }
 }

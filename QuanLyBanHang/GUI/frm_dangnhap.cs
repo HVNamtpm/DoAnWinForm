@@ -22,7 +22,7 @@ namespace QuanLyBanHang.GUI
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             DialogResult dialog;
-            dialog = MessageBox.Show(" Bạn có muốn thoat khỏi chương trình hay không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            dialog = MessageBox.Show(" Bạn có muốn thoát khỏi chương trình hay không", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 Application.Exit();

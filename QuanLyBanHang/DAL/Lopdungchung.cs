@@ -24,10 +24,10 @@ namespace QuanLyBanHang
         {
             conn = new SqlConnection(chuoiketnoi);
         }
+
         public SqlConnection connection()
         {
             SqlConnection conn = new SqlConnection(chuoiketnoi);
-
             return conn;
         }
 

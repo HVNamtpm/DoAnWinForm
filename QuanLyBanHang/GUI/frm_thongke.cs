@@ -26,7 +26,6 @@ namespace QuanLyBanHang.GUI
         private void btnTimTheoKhoangtg_Click(object sender, EventArgs e)
         {
             lopchung.connection().Open();
-
             string sql = "SELECT * FROM HOADON WHERE 1=1";
             if ((dt_timetruoc.Text != "") && (dt_timesau.Text != ""))
             {

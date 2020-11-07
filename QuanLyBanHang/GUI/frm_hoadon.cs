@@ -75,7 +75,7 @@ namespace QuanLyBanHang.GUI
 
         private void cb_manv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            con = lopchung.connection();
+            con =lopchung.connection();
             con.Open();
             comm = new SqlCommand("select * from NHANVIEN where MaNV = '" + cb_manv.SelectedValue.ToString() + "'", con);
             SqlDataReader reader = comm.ExecuteReader();
@@ -101,7 +101,6 @@ namespace QuanLyBanHang.GUI
             }
         }
 
-
         private void cb_mahang_SelectedIndexChanged(object sender, EventArgs e)
         {
             con = lopchung.connection();
@@ -113,7 +112,6 @@ namespace QuanLyBanHang.GUI
                 reader.Read();
                 txt_tenhang.Text = reader.GetString(2).ToString();
                 txt_dongia.Text = reader.GetInt32(5).ToString();
-
             }
         }
 
@@ -128,7 +126,6 @@ namespace QuanLyBanHang.GUI
                 sl = 0;
             else
                 sl = Convert.ToDouble(txt_soluong.Text);
-
             tt = gn * sl;
             txt_thanhtien.Text = tt.ToString();
         }
@@ -182,9 +179,7 @@ namespace QuanLyBanHang.GUI
             else MessageBox.Show("Có " + dthd.Rows.Count + " khách thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dtv_hd.DataSource = dthd;
         }
-
-        
-
+       
         private void btn_tinhtong_Click(object sender, EventArgs e)
         {
             int sc = dtv_hd.Rows.Count;
@@ -192,8 +187,6 @@ namespace QuanLyBanHang.GUI
             for (int i = 0; i < sc -1; i++)
                 thanhtien += float.Parse(dtv_hd.Rows[i].Cells["ThanhTIEN"].Value.ToString());
             txt_tongtien.Text = thanhtien.ToString();
-        }
-
-       
+        }      
     }
 }
